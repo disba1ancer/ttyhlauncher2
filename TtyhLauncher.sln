@@ -1,8 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtyhLauncher.Core", "TtyhLauncher.Core\TtyhLauncher.Core.csproj", "{F3D2DC0B-ACE4-4594-BFB0-594E1AF8DEE1}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TtyhLauncher.Core", "TtyhLauncher.Core\TtyhLauncher.Core.csproj", "{F3D2DC0B-ACE4-4594-BFB0-594E1AF8DEE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtyhLauncher.GTK", "TtyhLauncher.GTK\TtyhLauncher.GTK.csproj", "{C77479CD-AAB7-4650-A9B5-75376FF9F527}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TtyhLauncher.GTK", "TtyhLauncher.GTK\TtyhLauncher.GTK.csproj", "{C77479CD-AAB7-4650-A9B5-75376FF9F527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtyhLauncher.Win", "TtyhLauncher.Win\TtyhLauncher.Win.csproj", "{721C15A4-BC51-4121-BB29-304EBBE06A65}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F3D2DC0B-ACE4-4594-BFB0-594E1AF8DEE1} = {F3D2DC0B-ACE4-4594-BFB0-594E1AF8DEE1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +26,15 @@ Global
 		{C77479CD-AAB7-4650-A9B5-75376FF9F527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C77479CD-AAB7-4650-A9B5-75376FF9F527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C77479CD-AAB7-4650-A9B5-75376FF9F527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{721C15A4-BC51-4121-BB29-304EBBE06A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{721C15A4-BC51-4121-BB29-304EBBE06A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{721C15A4-BC51-4121-BB29-304EBBE06A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{721C15A4-BC51-4121-BB29-304EBBE06A65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F49887C-1220-4CEF-85BF-53C25C0F685F}
 	EndGlobalSection
 EndGlobal
