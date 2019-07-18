@@ -1,6 +1,7 @@
 .idea
 *.DotSettings.user
 .vs
+packages
 
 TtyhLauncher.Core/bin
 TtyhLauncher.Core/obj

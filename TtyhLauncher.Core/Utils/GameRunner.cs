@@ -74,7 +74,11 @@ namespace TtyhLauncher.Utils {
                 var libPath = Path.Combine(_librariesPath, IndexTool.GetLibraryPath(libraryInfo));
 
                 if (libraryInfo.Natives != null)
-                    ZipFile.ExtractToDirectory(libPath, nativesDir, true);
+                {
+                    ZipArchive archive = new ZipArchive(new FileStream(libPath, FileMode.Open));
+                    archive.ExtractToDirectory(nativesDir, true);
+                    //ZipFile.ExtractToDirectory(libPath, nativesDir, true);
+                } 
                 else
                     classPath.Add(libPath);
             }
@@ -94,7 +98,7 @@ namespace TtyhLauncher.Utils {
                 "-Dminecraft.launcher.version=" + _launcherVersion,
                 "-Djava.library.path=" + nativesDir,
                 "-cp",
-                string.Join(Platform.ClassPathSeparator, classPath),
+                string.Join(Platform.ClassPathSeparator.ToString(), classPath),
                 versionIndex.MainClass
             });
 
@@ -126,7 +130,7 @@ namespace TtyhLauncher.Utils {
                 javaPath = data.CustomJavaPath;
             }
 
-            _log.Info($"{javaPath} {string.Join(' ', args)}");
+            _log.Info($"{javaPath} {string.Join(Char.ToString(' '), args)}");
             var exitCode = await RunProcessAsync(javaPath, profileDir, args);
             _log.Info($"Client terminated with exit code {exitCode}");
 
@@ -143,7 +147,34 @@ namespace TtyhLauncher.Utils {
             };
 
             foreach (var arg in args) {
-                info.ArgumentList.Add(arg);
+                info.Arguments += " \"";
+                for (int i = 0, backSlashes = 0; i < arg.Length; ++i)
+                {
+                    if (arg[i] == '"')
+                    {
+                        while (backSlashes > 0)
+                        {
+                            info.Arguments += '\\';
+                            --backSlashes;
+                        }
+                        info.Arguments += "\\\"";
+                        break;
+                    } else
+                    {
+                        info.Arguments += arg[i];
+                        switch (arg[i])
+                        {
+                            case '\\':
+                                ++backSlashes;
+                                break;
+                            default:
+                                backSlashes = 0;
+                                break;
+                        }
+                    }
+                }
+                info.Arguments += "\"";
+                //info.ArgumentList.Add(arg);
             }
 
             using (var process = new Process {StartInfo = info, EnableRaisingEvents = true}) {

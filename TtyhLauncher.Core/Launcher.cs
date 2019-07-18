@@ -218,7 +218,7 @@ namespace TtyhLauncher {
         }
 
         private async Task TryUploadSkin(string path, bool isSlim) {
-            var bytes = await File.ReadAllBytesAsync(path);
+            var bytes = /*await*/ File.ReadAllBytes/*Async*/(path);
             await _ttyhClient.UploadSkin(_ui.UserName, _ui.Password, bytes, isSlim);
         }
 
