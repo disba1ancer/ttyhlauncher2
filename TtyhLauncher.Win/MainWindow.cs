@@ -71,6 +71,7 @@ namespace TtyhLauncher.Win
             txtPassword.Enabled = interactable;
             chkRemember.Enabled = interactable;
             btnLogin.Enabled = interactable;
+            chkOffline.Enabled = interactable;
         }
 
         public void SetProfiles(string[] names, string selected)
@@ -166,6 +167,12 @@ namespace TtyhLauncher.Win
         private void BtnUploadSkin_Click(object sender, EventArgs e)
         {
             OnUploadSkinClicked?.Invoke();
+        }
+
+        public bool ConfirmProfileDeletion(string id)
+        {
+            var result = MessageBox.Show(this, "Do you really want to remove profile \"" + id + "\"?", "Profile remove", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            return result == DialogResult.Yes;
         }
     }
 }

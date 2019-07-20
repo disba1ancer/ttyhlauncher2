@@ -23,8 +23,11 @@ namespace TtyhLauncher.Win
 
         private void BtnBrowse_Click(object sender, EventArgs e)
         {
-            openFileDlg.ShowDialog(this);
-            txtSkinPath.Text = openFileDlg.FileName;
+            var result = openFileDlg.ShowDialog(this);
+            if (result == DialogResult.OK)
+            {
+                txtSkinPath.Text = openFileDlg.FileName;
+            }
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

@@ -35,6 +35,13 @@ namespace TtyhLauncher.Win
             UpdateVersions();
             cbxVersion.SelectedItem = profile.FullVersion.Version;
             chkNoCheck.Checked = profile.CheckVersionFiles;
+            chkCustomJava.Checked = profile.UseCustomJavaPath;
+            EnableJavaPath(profile.UseCustomJavaPath);
+            txtCustomJava.Text = profile.CustomJavaPath;
+            dlgSelectJava.FileName = profile.CustomJavaPath;
+            chkJavaArgs.Checked = profile.UseCustomJavaArgs;
+            txtJavaArgs.Enabled = profile.UseCustomJavaArgs;
+            txtJavaArgs.Text = profile.CustomJavaArgs;
         }
 
         private void CbxProfile_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,10 +69,39 @@ namespace TtyhLauncher.Win
                 FullVersion = new FullVersionId(
                     prefixes[cbxPrefix.SelectedIndex].Id,
                     prefixes[cbxPrefix.SelectedIndex].Versions[cbxVersion.SelectedIndex]),
-                CheckVersionFiles = chkNoCheck.Checked
+                CheckVersionFiles = chkNoCheck.Checked,
+                UseCustomJavaPath = chkCustomJava.Checked,
+                CustomJavaPath = txtCustomJava.Text,
+                UseCustomJavaArgs = chkJavaArgs.Checked,
+                CustomJavaArgs = txtJavaArgs.Text
             };
             save.Invoke(txtProfileName.Text, profileData);
             Close();
+        }
+
+        private void EnableJavaPath(bool en)
+        {
+            txtCustomJava.Enabled = en;
+            btnBrowse.Enabled = en;
+        }
+
+        private void ChkCustomJava_CheckedChanged(object sender, EventArgs e)
+        {
+            EnableJavaPath(chkCustomJava.Checked);
+        }
+
+        private void ChkJavaArgs_CheckedChanged(object sender, EventArgs e)
+        {
+            txtJavaArgs.Enabled = chkJavaArgs.Checked;
+        }
+
+        private void BtnBrowse_Click(object sender, EventArgs e)
+        {
+            var result = dlgSelectJava.ShowDialog(this);
+            if (result == DialogResult.OK)
+            {
+                txtCustomJava.Text = dlgSelectJava.FileName;
+            }
         }
     }
 }
