@@ -16,14 +16,14 @@ namespace TtyhLauncher.Win
         [STAThread]
         static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             var app = new LauncherAppWin();
             app.Run();
         }
 
         LauncherAppWin()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
             mainWindow = new MainWindow();
         }
 
