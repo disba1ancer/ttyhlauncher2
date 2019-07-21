@@ -75,8 +75,10 @@ namespace TtyhLauncher.Utils {
 
                 if (libraryInfo.Natives != null)
                 {
-                    ZipArchive archive = new ZipArchive(new FileStream(libPath, FileMode.Open));
+                    var stream = new FileStream(libPath, FileMode.Open);
+                    ZipArchive archive = new ZipArchive(stream);
                     archive.ExtractToDirectory(nativesDir, true);
+                    stream.Close();
                     //ZipFile.ExtractToDirectory(libPath, nativesDir, true);
                 } 
                 else

@@ -117,25 +117,107 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="downloadRequest" xml:space="preserve">
-    <value>Download {0}({1} MiB) files?</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 23</value>
   </data>
-  <data name="downloadTitle" xml:space="preserve">
-    <value>Download</value>
+  <data name="btnLogin.Text" xml:space="preserve">
+    <value>Играть</value>
   </data>
-  <data name="errorTitle" xml:space="preserve">
-    <value>Error</value>
+  <data name="chkRemember.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 394</value>
   </data>
-  <data name="profileDeleteRequest" xml:space="preserve">
-    <value>Do you really want to remove profile "{0}"?</value>
+  <data name="chkRemember.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 17</value>
   </data>
-  <data name="profileDeleteTitle" xml:space="preserve">
-    <value>Profile remove</value>
+  <data name="chkRemember.Text" xml:space="preserve">
+    <value>Запомнить</value>
   </data>
-  <data name="uploadSkinErrorTitle" xml:space="preserve">
-    <value>Failed to upload skin!</value>
+  <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 342</value>
   </data>
-  <data name="uploadSkinErrorUnknown" xml:space="preserve">
-    <value>Unknown error</value>
+  <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 13</value>
+  </data>
+  <data name="lblUsername.Text" xml:space="preserve">
+    <value>Имя пользователя</value>
+  </data>
+  <data name="lblPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 368</value>
+  </data>
+  <data name="lblPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="lblPassword.Text" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="lblProfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 316</value>
+  </data>
+  <data name="lblProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="lblProfile.Text" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 23</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="pnlMultibutton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>732, 391</value>
+  </data>
+  <data name="pnlMultibutton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 23</value>
+  </data>
+  <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Опции</value>
+  </data>
+  <data name="btnProfileEditor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="btnProfileEditor.Text" xml:space="preserve">
+    <value>Редактировать профиль</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 6</value>
+  </data>
+  <data name="btnAddProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="btnAddProfile.Text" xml:space="preserve">
+    <value>Добавить профиль</value>
+  </data>
+  <data name="btnRemoveProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="btnRemoveProfile.Text" xml:space="preserve">
+    <value>Удалить профиль</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 6</value>
+  </data>
+  <data name="btnUploadSkin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="btnUploadSkin.Text" xml:space="preserve">
+    <value>Загрузить скин</value>
+  </data>
+  <data name="chkHide.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="chkHide.Text" xml:space="preserve">
+    <value>Скрыть после запуска</value>
+  </data>
+  <data name="chkOffline.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="chkOffline.Text" xml:space="preserve">
+    <value>Офлайн режим</value>
   </data>
 </root>

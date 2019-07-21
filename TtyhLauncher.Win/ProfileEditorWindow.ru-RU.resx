@@ -117,25 +117,89 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="downloadRequest" xml:space="preserve">
-    <value>Download {0}({1} MiB) files?</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
   </data>
-  <data name="downloadTitle" xml:space="preserve">
-    <value>Download</value>
+  <data name="lblVersion.Text" xml:space="preserve">
+    <value>Версия</value>
   </data>
-  <data name="errorTitle" xml:space="preserve">
-    <value>Error</value>
+  <data name="lblPrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
   </data>
-  <data name="profileDeleteRequest" xml:space="preserve">
-    <value>Do you really want to remove profile "{0}"?</value>
+  <data name="lblPrefix.Text" xml:space="preserve">
+    <value>Префикс</value>
   </data>
-  <data name="profileDeleteTitle" xml:space="preserve">
-    <value>Profile remove</value>
+  <data name="chkNoCheck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 17</value>
   </data>
-  <data name="uploadSkinErrorTitle" xml:space="preserve">
-    <value>Failed to upload skin!</value>
+  <data name="chkNoCheck.Text" xml:space="preserve">
+    <value>Проверять префикс</value>
   </data>
-  <data name="uploadSkinErrorUnknown" xml:space="preserve">
-    <value>Unknown error</value>
+  <data name="cbxVersion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 65</value>
+  </data>
+  <data name="cbxVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 21</value>
+  </data>
+  <data name="lblPrefixName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 13</value>
+  </data>
+  <data name="lblPrefixName.Text" xml:space="preserve">
+    <value>Название профиля</value>
+  </data>
+  <data name="txtProfileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 12</value>
+  </data>
+  <data name="txtProfileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 20</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 226</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="chkCustomJava.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 17</value>
+  </data>
+  <data name="chkCustomJava.Text" xml:space="preserve">
+    <value>Путь к Java</value>
+  </data>
+  <data name="txtCustomJava.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 116</value>
+  </data>
+  <data name="txtCustomJava.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
+  </data>
+  <data name="chkJavaArgs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 17</value>
+  </data>
+  <data name="chkJavaArgs.Text" xml:space="preserve">
+    <value>Аргументы Java</value>
+  </data>
+  <data name="txtJavaArgs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 144</value>
+  </data>
+  <data name="txtJavaArgs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 20</value>
+  </data>
+  <data name="btnBrowse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 115</value>
+  </data>
+  <data name="btnBrowse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 23</value>
+  </data>
+  <data name="btnBrowse.Text" xml:space="preserve">
+    <value>Обзор</value>
+  </data>
+  <data name="cbxPrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 38</value>
+  </data>
+  <data name="cbxPrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 21</value>
   </data>
 </root>

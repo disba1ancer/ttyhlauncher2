@@ -118,24 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="downloadRequest" xml:space="preserve">
-    <value>Download {0}({1} MiB) files?</value>
+    <value>Загрузить {0}({1} MiB) файлов?</value>
   </data>
   <data name="downloadTitle" xml:space="preserve">
-    <value>Download</value>
+    <value>Загрузка</value>
   </data>
   <data name="errorTitle" xml:space="preserve">
-    <value>Error</value>
+    <value>Ошибка</value>
   </data>
   <data name="profileDeleteRequest" xml:space="preserve">
-    <value>Do you really want to remove profile "{0}"?</value>
+    <value>Вы действительно хотите удалить профиль "{0}"?</value>
   </data>
   <data name="profileDeleteTitle" xml:space="preserve">
-    <value>Profile remove</value>
+    <value>Удаление профиля</value>
   </data>
   <data name="uploadSkinErrorTitle" xml:space="preserve">
-    <value>Failed to upload skin!</value>
+    <value>Невозможно загрузить скин!</value>
   </data>
   <data name="uploadSkinErrorUnknown" xml:space="preserve">
-    <value>Unknown error</value>
+    <value>Неизвестная ошибка</value>
   </data>
 </root>

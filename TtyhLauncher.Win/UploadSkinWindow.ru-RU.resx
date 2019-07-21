@@ -117,25 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="downloadRequest" xml:space="preserve">
-    <value>Download {0}({1} MiB) files?</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblSkinPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
   </data>
-  <data name="downloadTitle" xml:space="preserve">
-    <value>Download</value>
+  <data name="lblSkinPath.Text" xml:space="preserve">
+    <value>Путь к скину</value>
   </data>
-  <data name="errorTitle" xml:space="preserve">
-    <value>Error</value>
+  <data name="txtSkinPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 13</value>
   </data>
-  <data name="profileDeleteRequest" xml:space="preserve">
-    <value>Do you really want to remove profile "{0}"?</value>
+  <data name="txtSkinPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
   </data>
-  <data name="profileDeleteTitle" xml:space="preserve">
-    <value>Profile remove</value>
+  <data name="btnBrowse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 12</value>
   </data>
-  <data name="uploadSkinErrorTitle" xml:space="preserve">
-    <value>Failed to upload skin!</value>
+  <data name="btnBrowse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 23</value>
   </data>
-  <data name="uploadSkinErrorUnknown" xml:space="preserve">
-    <value>Unknown error</value>
+  <data name="btnBrowse.Text" xml:space="preserve">
+    <value>Обзор</value>
+  </data>
+  <data name="btnUpload.Text" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="chkSlimModel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 17</value>
+  </data>
+  <data name="chkSlimModel.Text" xml:space="preserve">
+    <value>Использовать "тонкую" модель</value>
   </data>
 </root>

@@ -37,18 +37,19 @@ namespace TtyhLauncher.Win
 
         private async void BtnUpload_Click(object sender, EventArgs e)
         {
+            var rm = Properties.Resources.ResourceManager;
             try
             {
                 await upload.Invoke(txtSkinPath.Text, chkSlimModel.Checked);
             }
             catch (ErrorAnswerException answerException)
             {
-                MessageBox.Show(this, "Failed to upload skin!", answerException.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, answerException.Message, rm.GetString("uploadSkinErrorTitle"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             catch
             {
-                MessageBox.Show(this, "Failed to upload skin!", "Unknown error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, rm.GetString("uploadSkinErrorUnknown"), rm.GetString("uploadSkinErrorTitle"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             Close();

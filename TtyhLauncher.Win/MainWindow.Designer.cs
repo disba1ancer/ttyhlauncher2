@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -44,13 +45,13 @@
             this.mnuMain = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnProfileEditor = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.chkOffline = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAddProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRemoveProfile = new System.Windows.Forms.ToolStripMenuItem();
-            this.chkHide = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnUploadSkin = new System.Windows.Forms.ToolStripMenuItem();
+            this.chkHide = new System.Windows.Forms.ToolStripMenuItem();
+            this.chkOffline = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMultibutton.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.mnuMain.SuspendLayout();
@@ -58,158 +59,85 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.txtUsername, "txtUsername");
             this.pnlMain.SetColumnSpan(this.txtUsername, 2);
-            this.txtUsername.Location = new System.Drawing.Point(638, 339);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(150, 20);
-            this.txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.pnlMain.SetColumnSpan(this.txtPassword, 2);
-            this.txtPassword.Location = new System.Drawing.Point(638, 365);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '•';
-            this.txtPassword.Size = new System.Drawing.Size(150, 20);
-            this.txtPassword.TabIndex = 1;
             // 
             // btnLogin
             // 
-            this.btnLogin.AutoSize = true;
-            this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLogin.Location = new System.Drawing.Point(0, 0);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.btnLogin, "btnLogin");
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(43, 23);
-            this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // chkRemember
             // 
-            this.chkRemember.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.chkRemember.AutoSize = true;
+            resources.ApplyResources(this.chkRemember, "chkRemember");
             this.pnlMain.SetColumnSpan(this.chkRemember, 2);
-            this.chkRemember.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkRemember.Location = new System.Drawing.Point(577, 394);
             this.chkRemember.Name = "chkRemember";
-            this.chkRemember.Size = new System.Drawing.Size(94, 17);
-            this.chkRemember.TabIndex = 3;
-            this.chkRemember.Text = "Remember me";
             this.chkRemember.UseVisualStyleBackColor = true;
             // 
             // lblUsername
             // 
-            this.lblUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblUsername.Location = new System.Drawing.Point(577, 342);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.lblUsername, "lblUsername");
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(55, 13);
-            this.lblUsername.TabIndex = 4;
-            this.lblUsername.Text = "Username";
             // 
             // lblPassword
             // 
-            this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblPassword.Location = new System.Drawing.Point(577, 368);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.lblPassword, "lblPassword");
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(53, 13);
-            this.lblPassword.TabIndex = 5;
-            this.lblPassword.Text = "Password";
             // 
             // cbxProfile
             // 
-            this.cbxProfile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.cbxProfile, "cbxProfile");
             this.pnlMain.SetColumnSpan(this.cbxProfile, 2);
             this.cbxProfile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProfile.FormattingEnabled = true;
-            this.cbxProfile.Location = new System.Drawing.Point(638, 312);
             this.cbxProfile.Name = "cbxProfile";
-            this.cbxProfile.Size = new System.Drawing.Size(150, 21);
-            this.cbxProfile.TabIndex = 6;
             // 
             // lblProfile
             // 
-            this.lblProfile.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblProfile.AutoSize = true;
-            this.lblProfile.Location = new System.Drawing.Point(577, 316);
-            this.lblProfile.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.lblProfile, "lblProfile");
             this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(36, 13);
-            this.lblProfile.TabIndex = 7;
-            this.lblProfile.Text = "Profile";
             // 
             // progress
             // 
-            this.progress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.progress, "progress");
             this.pnlMain.SetColumnSpan(this.progress, 4);
-            this.progress.Location = new System.Drawing.Point(12, 283);
             this.progress.Name = "progress";
-            this.progress.Size = new System.Drawing.Size(776, 23);
-            this.progress.TabIndex = 8;
             // 
             // txtLog
             // 
-            this.txtLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.txtLog, "txtLog");
             this.txtLog.BackColor = System.Drawing.SystemColors.Window;
             this.pnlMain.SetColumnSpan(this.txtLog, 4);
-            this.txtLog.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtLog.Location = new System.Drawing.Point(12, 12);
-            this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
             this.txtLog.ReadOnly = true;
-            this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtLog.Size = new System.Drawing.Size(776, 265);
-            this.txtLog.TabIndex = 9;
             // 
             // btnCancel
             // 
-            this.btnCancel.AutoSize = true;
-            this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(0, 0);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(50, 23);
-            this.btnCancel.TabIndex = 10;
-            this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // pnlMultibutton
             // 
-            this.pnlMultibutton.AutoSize = true;
-            this.pnlMultibutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            resources.ApplyResources(this.pnlMultibutton, "pnlMultibutton");
             this.pnlMultibutton.Controls.Add(this.btnCancel);
             this.pnlMultibutton.Controls.Add(this.btnLogin);
-            this.pnlMultibutton.Location = new System.Drawing.Point(738, 391);
             this.pnlMultibutton.Name = "pnlMultibutton";
-            this.pnlMultibutton.Size = new System.Drawing.Size(50, 23);
-            this.pnlMultibutton.TabIndex = 13;
             // 
             // pnlMain
             // 
-            this.pnlMain.ColumnCount = 4;
-            this.pnlMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.pnlMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.pnlMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            resources.ApplyResources(this.pnlMain, "pnlMain");
             this.pnlMain.Controls.Add(this.lblProfile, 1, 2);
             this.pnlMain.Controls.Add(this.txtLog, 0, 0);
             this.pnlMain.Controls.Add(this.lblUsername, 1, 3);
@@ -220,31 +148,15 @@
             this.pnlMain.Controls.Add(this.cbxProfile, 2, 2);
             this.pnlMain.Controls.Add(this.pnlMultibutton, 3, 5);
             this.pnlMain.Controls.Add(this.txtUsername, 2, 3);
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(0, 24);
-            this.pnlMain.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Padding = new System.Windows.Forms.Padding(9);
-            this.pnlMain.RowCount = 6;
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.pnlMain.Size = new System.Drawing.Size(800, 426);
-            this.pnlMain.TabIndex = 15;
             // 
             // mnuMain
             // 
             this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem});
-            this.mnuMain.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.mnuMain, "mnuMain");
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.mnuMain.Size = new System.Drawing.Size(800, 24);
-            this.mnuMain.TabIndex = 14;
-            this.mnuMain.Text = "menuStrip1";
             // 
             // optionsToolStripMenuItem
             // 
@@ -258,74 +170,65 @@
             this.chkHide,
             this.chkOffline});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.optionsToolStripMenuItem.Text = "Options";
+            resources.ApplyResources(this.optionsToolStripMenuItem, "optionsToolStripMenuItem");
             // 
             // btnProfileEditor
             // 
             this.btnProfileEditor.Name = "btnProfileEditor";
-            this.btnProfileEditor.Size = new System.Drawing.Size(180, 22);
-            this.btnProfileEditor.Text = "Edit profile";
+            resources.ApplyResources(this.btnProfileEditor, "btnProfileEditor");
             this.btnProfileEditor.Click += new System.EventHandler(this.BtnProfileEditor_Click);
             // 
-            // toolStripMenuItem1
+            // toolStripMenuItem2
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // chkOffline
-            // 
-            this.chkOffline.CheckOnClick = true;
-            this.chkOffline.Name = "chkOffline";
-            this.chkOffline.Size = new System.Drawing.Size(180, 22);
-            this.chkOffline.Text = "Offline mode";
-            this.chkOffline.CheckedChanged += new System.EventHandler(this.ChkOffline_CheckedChanged);
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
             // 
             // btnAddProfile
             // 
             this.btnAddProfile.Name = "btnAddProfile";
-            this.btnAddProfile.Size = new System.Drawing.Size(180, 22);
-            this.btnAddProfile.Text = "Add profile";
+            resources.ApplyResources(this.btnAddProfile, "btnAddProfile");
             this.btnAddProfile.Click += new System.EventHandler(this.BtnAddProfile_Click);
             // 
             // btnRemoveProfile
             // 
             this.btnRemoveProfile.Name = "btnRemoveProfile";
-            this.btnRemoveProfile.Size = new System.Drawing.Size(180, 22);
-            this.btnRemoveProfile.Text = "Remove profile";
+            resources.ApplyResources(this.btnRemoveProfile, "btnRemoveProfile");
             this.btnRemoveProfile.Click += new System.EventHandler(this.BtnRemoveProfile_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            // 
+            // btnUploadSkin
+            // 
+            this.btnUploadSkin.Name = "btnUploadSkin";
+            resources.ApplyResources(this.btnUploadSkin, "btnUploadSkin");
+            this.btnUploadSkin.Click += new System.EventHandler(this.BtnUploadSkin_Click);
             // 
             // chkHide
             // 
             this.chkHide.CheckOnClick = true;
             this.chkHide.Name = "chkHide";
-            this.chkHide.Size = new System.Drawing.Size(180, 22);
-            this.chkHide.Text = "Hide after launch";
+            resources.ApplyResources(this.chkHide, "chkHide");
             // 
-            // toolStripMenuItem2
+            // chkOffline
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
-            // 
-            // btnUploadSkin
-            // 
-            this.btnUploadSkin.Name = "btnUploadSkin";
-            this.btnUploadSkin.Size = new System.Drawing.Size(180, 22);
-            this.btnUploadSkin.Text = "Upload skin";
-            this.btnUploadSkin.Click += new System.EventHandler(this.BtnUploadSkin_Click);
+            this.chkOffline.CheckOnClick = true;
+            this.chkOffline.Name = "chkOffline";
+            resources.ApplyResources(this.chkOffline, "chkOffline");
+            this.chkOffline.CheckedChanged += new System.EventHandler(this.ChkOffline_CheckedChanged);
             // 
             // MainWindow
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.mnuMain);
             this.MainMenuStrip = this.mnuMain;
             this.Name = "MainWindow";
-            this.Text = "Ttyh Launcher";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.pnlMultibutton.ResumeLayout(false);
             this.pnlMultibutton.PerformLayout();

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,13 +41,17 @@ namespace TtyhLauncher.Win
 
         public void AppendLog(string line)
         {
-            txtLog.AppendText(line + "\r\n");
+            line += Environment.NewLine;
+            txtLog.AppendText(line);
         }
 
         public bool AskForDownloads(int filesCount, long totalSize)
         {
-            var result = MessageBox.Show(this, "Download " + filesCount + "(" + (totalSize >> 20) + " MiB)" + " files?", "Download", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            return result == DialogResult.Yes ;
+            var msg = new StringBuilder();
+            var rm = Properties.Resources.ResourceManager;
+            msg.AppendFormat(rm.GetString("downloadRequest"), filesCount, (Convert.ToDouble(totalSize) / 1024 / 1024).ToString("0.##"));
+            var result = MessageBox.Show(this, msg.ToString(), rm.GetString("downloadTitle"), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return result == DialogResult.Yes;
         }
 
         public void GetWindowSize(out int w, out int h)
@@ -108,7 +113,8 @@ namespace TtyhLauncher.Win
 
         public void ShowErrorMessage([Localizable(true)] string message, string details = null)
         {
-            MessageBox.Show(this, message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            var rm = Properties.Resources.ResourceManager;
+            MessageBox.Show(this, message, rm.GetString("errorTitle"), MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public void ShowProfile(string id, ProfileData profile, CachedPrefixInfo[] prefixes, Action<string, ProfileData> save)
@@ -171,7 +177,10 @@ namespace TtyhLauncher.Win
 
         public bool ConfirmProfileDeletion(string id)
         {
-            var result = MessageBox.Show(this, "Do you really want to remove profile \"" + id + "\"?", "Profile remove", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var msg = new StringBuilder();
+            var rm = Properties.Resources.ResourceManager;
+            msg.AppendFormat(rm.GetString("profileDeleteRequest"), id);
+            var result = MessageBox.Show(this, msg.ToString(), rm.GetString("profileDeleteTitle"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             return result == DialogResult.Yes;
         }
     }
